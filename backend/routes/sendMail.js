@@ -17,7 +17,7 @@ const sendMail = async (req, res) => {
     from: '"Virtual Hiring" <virtual@gmail.com>', // sender address
     to: "f190911@nu.edu.pk", // list of receivers
     subject: "Nice Sir",
-    text: "Freat Sir, Nice to meet with you",
+    text: "Raees Sir, Nice to meet with you",
     html: "<b>Awoseme</b>", 
   });
   console.log("Message sent: %s", info.messageId);
