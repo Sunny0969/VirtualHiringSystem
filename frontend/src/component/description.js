@@ -215,7 +215,7 @@ const JobDetailComponent = () => {
             <ul class="list-unstyled">
               <li>
                 <i></i>Bachelor's or Master's degree in Computer Science,
-                Software Engineering, or a related field.
+                Software Engineering,AI Engineering,Robotics or a related field.
               </li>
               <li>
                 <i></i>Proven experience in software development, preferably in
@@ -231,7 +231,7 @@ const JobDetailComponent = () => {
               </li>
               <li>
                 <i></i>Familiarity with web development technologies and
-                frameworks (e.g., HTML, CSS, React, Angular) is a plus.
+                frameworks (e.g., HTML, CSS, JavaScript, React, Angular) is a plus.
               </li>
               <li>
                 <i></i>Strong communication and collaboration skills, with the
@@ -280,7 +280,7 @@ const JobDetailComponent = () => {
               <ul>
                 <li>
                   Bachelor's or Master's degree in Computer Science, Software
-                  Engineering, or a related field.
+                  Engineering,AI Engineering,Robotics or a related field.
                 </li>
               </ul>
             </li>
@@ -329,7 +329,7 @@ const JobDetailComponent = () => {
               <ul>
                 <li>
                   Familiarity with web development technologies and frameworks
-                  (e.g., HTML, CSS, JavaScript).
+                  (e.g., HTML, CSS, JavaScript, Angular, React).
                 </li>
                 <li>
                   Experience with front-end frameworks (e.g., React, Angular,
