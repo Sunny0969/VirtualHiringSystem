@@ -75,7 +75,20 @@ function Editor(props) {
             }))
           }
         />
-        
+        <InputControl
+          label="Location"
+          placeholder="Enter location eg. Remote"
+          value={values.location}
+          onChange={(event) =>
+            { const inputValue = event.target.value;
+              if (/^[a-zA-Z\s]*$/.test(inputValue)) {
+              setValues((prev) => ({ ...prev, location: event.target.value }))
+            }
+          }}
+          required
+        />
+      </div>
+      <div className={styles.row}>
         <InputControl
           label="Start Date"
           type="date"
