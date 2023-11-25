@@ -1,4 +1,5 @@
-export const server = "http://localhost:4444";
+// This could be loaded from an environment variable or configuration file
+const server = process.env.SERVER || "http://localhost:4444";
 
 const apiList = {
   login: `${server}/auth/login`,
@@ -6,15 +7,14 @@ const apiList = {
   uploadResume: `${server}/upload/resume`,
   uploadProfileImage: `${server}/upload/file`,
   jobs: `${server}/api/jobs`,
-  homejobs: `${server}/api//homejobs`,
+  homejobs: `${server}/api/homejobs`,
   applications: `${server}/api/applications`,
   rating: `${server}/api/rating`,
   user: `${server}/api/user`,
   applicants: `${server}/api/applicants`,
   imageData: `${server}/api/recruiter`,
-  saveDate: `${server}/api/calender`,
-  file:`${server}/api/file`,
-
+  saveDate: `${server}/api/calendar`,
+  file: `${server}/api/file`,
 };
 
-export default apiList;
+export { server, apiList };
