@@ -19,14 +19,18 @@ function Editor(props) {
   const [sectionTitle, setSectionTitle] = useState(
     sections[Object.keys(sections)[0]]
   );
-  const [values, setValues] = useState({
+function getDefaultValues(activeInformation) {
+  return {
     name: activeInformation?.detail?.name || "",
     linkedin: activeInformation?.detail?.linkedin || "",
     github: activeInformation?.detail?.github || "",
     phone: activeInformation?.detail?.phone || "",
     email: activeInformation?.detail?.email || "",
-  });
-
+  };
+}
+ 
+const [values, setValues] = useState(getDefaultValues(activeInformation));
+  
   const handlePointUpdate = (value, index) => {
     const tempValues = { ...values };
     if (!Array.isArray(tempValues.points)) tempValues.points = [];
