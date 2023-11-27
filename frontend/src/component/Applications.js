@@ -59,27 +59,24 @@ const ApplicationTile = (props) => {
   const appliedOn = new Date(application.dateOfApplication);
   const joinedOn = new Date(application.dateOfJoining);
 
-  const fetchRating = () => {
-    axios
-      .get(`${apiList.rating}?id=${application.job._id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
-      .then((response) => {
-        setRating(response.data.rating);
-        console.log(response.data);
-      })
-      .catch((err) => {
-        // console.log(err.response);
-        console.log(err.response.data);
-        setPopup({
-          open: true,
-          severity: "error",
-          message: "Error",
-        });
-      });
-  };
+  const fetchRating = async () => {
+  try {
+    const response = await axios.get(`${apiList.rating}?id=${application.job._id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
+    setRating(response.data.rating);
+    console.log(response.data);
+  } catch (error) {
+    console.log(error.response.data);
+    setPopup({
+      open: true,
+      severity: 'error',
+      message: 'Error',
+    });
+  }
+};
 
   const changeRating = () => {
     axios
