@@ -1,11 +1,12 @@
-const isAuth = () => {
-  console.log(localStorage.getItem("token"))
-  console.log(Boolean(localStorage.getItem("token")))
-  return localStorage.getItem("token");
+const getToken = () => {
+  const token = localStorage.getItem("token");
+  console.log(token);
+  console.log(Boolean(token));
+  return token;
 };
 
 export const userType = () => {
   return localStorage.getItem("type");
 };
 
-export default isAuth;
+export default getToken;
